@@ -1,12 +1,11 @@
 import argparse
 import importlib
 
-
 def main(day, part):
 	solution = importlib.import_module("solutions.day%02d" % day)
 
 	with open("inputs/day%02d.txt" % day, "r") as f:
-		input_data = [l for l in f]
+		input_data = [l.strip() for l in f]
 	
 	if part == 1:
 		return solution.part1(input_data)
