@@ -21,7 +21,7 @@ def part2(input_data):
 	candidate_ceiling = math.ceil(average)
 
 	def print_total_fuel(reference):
-		print(sum([difference(position, reference) * (difference(position, reference) + 1) for position in data]) / 2)
+		print(sum([difference(position, reference) * (difference(position, reference) + 1) for position in input_data]) / 2)
 
 	print_total_fuel(candidate_floor)
 	print_total_fuel(candidate_ceiling)
